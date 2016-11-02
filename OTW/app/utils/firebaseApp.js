@@ -1,15 +1,7 @@
 import firebase from 'firebase';
+import firebaseApp from './firebaseConfig';
 import store from '../store';
 import updateHelpees from '../actions/updateHelpees';
-
-var firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  storageBucket: "",
-};
-var firebaseApp = firebase.initializeApp(firebaseConfig);
-
 
 function getRef() {
   return firebaseApp.database().ref().child('helpie');
@@ -64,7 +56,7 @@ export default _addHelpie;
   //       helpie.push({
   //         latitude: child.val().latitude,
   //         longitude: child.val().longitude,
-  //         name: child.val().name,          
+  //         name: child.val().name,
   //         _key: child.key
   //       });
   //     });
@@ -75,4 +67,3 @@ export default _addHelpie;
   //   this.listenForItems(this.itemsRef);
   // }
 
-  
