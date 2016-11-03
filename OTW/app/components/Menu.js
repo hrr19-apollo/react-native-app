@@ -29,6 +29,9 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
         label="Close Panel"
         style={{backgroundColor: 'red'}}
       />
+      <Button
+         label="Log Out"
+      />
     </View>
   );
 }
