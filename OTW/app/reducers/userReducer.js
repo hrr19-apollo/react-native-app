@@ -8,11 +8,16 @@ const INITIAL_STATE = Map({
 
 export default function userState(state=INITIAL_STATE, action) {
   switch(action.type) {
-    case UPDATE_USER:
+    case UPDATE_USER: {
       return Map(action.user);
-    case REMOVE_USER:
+    } break;
+
+    case REMOVE_USER: {
       return null;
-    default:
+    } break;
+
+    default: {
       return state;
+    }
   }
 }

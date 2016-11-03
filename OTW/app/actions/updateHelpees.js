@@ -4,7 +4,7 @@ const updateHelpees = (helpees) => {
   return {
     type: UPDATE_HELPEES,
     helpees
-  }
-} 
+  };
+}
 
 export default updateHelpees;

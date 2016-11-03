@@ -10,5 +10,5 @@ export function updateUser(user) {
 export function removeUser() {
   return {
     type: REMOVE_USER
-  }
+  };
 }

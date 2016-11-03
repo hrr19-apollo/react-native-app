@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import UserBar from '../components/UserBar';
 
-const mapStateToProps = function(state) {
+const mapStateToProps = (state) => {
   return {
     user: state.userState
   };

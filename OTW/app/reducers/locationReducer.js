@@ -9,9 +9,12 @@ const INITIAL_STATE = Map({
 
 export default function locationState (state=INITIAL_STATE, action) {
   switch(action.type) {
-    case UPDATE_LOCATION:
+    case UPDATE_LOCATION: {
       return Map({lat: action.loc.lat, long: action.loc.long});
-    default:
+    } break;
+
+    default: {
       return state;
-  }
+    };
+  };
 }

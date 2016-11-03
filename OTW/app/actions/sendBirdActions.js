@@ -4,7 +4,7 @@ import {
   ADD_REMOVE_CHANNEL,
   SEND_MESSAGE,
   GET_MESSAGES,
-  } from './actionTypes';
+} from './actionTypes';
 
 export function updateSendBirdUsers(users) {
   return {
@@ -16,29 +16,29 @@ export function updateSendBirdUsers(users) {
 export function updateFriendsList(user){
   return {
     type: ADD_REMOVE_FRIEND_TO_LIST,
-	user
-  }
+    user
+  };
 }
 
 export function updateChannelList(channel){
   return {
     type: ADD_REMOVE_CHANNEL,
-	channel
-  }
+    channel
+  };
 }
 
 export function updateCurrentMessage(message){
   return {
     type: SEND_MESSAGE,
-  message
-  }
+    message
+  };
 }
 
 export function updateMessageList(messages){
   return {
     type: GET_MESSAGES,
-  messages
-  }
+    messages
+  };
 }
 
 
