@@ -23,8 +23,6 @@ class SignIn extends Component {
   }
 
   render() {
-    console.log('check the props for handleNavigate', this.props);
-
     if (this.props.user.get('name') === 'Guest') {
       return (
         <GoogleSigninButton
@@ -82,6 +80,7 @@ class SignIn extends Component {
       this.props.updateUser(user);
       this.props._handleForwardAction('help');
       //FIXME: sendbird not working
+      //TODO(Mitch): Investigate this.
       sendBirdConnect(user.email, user.name, () => {
         console.log('sendbird connection successful');
       });

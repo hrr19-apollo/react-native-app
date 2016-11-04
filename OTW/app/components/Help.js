@@ -18,7 +18,7 @@ import Button from './Button';
 import BottomBarContainer from '../containers/BottomBarContainer';
 
 class Help extends Component {
-  getHelp(){
+  getHelp() {
     _addHelpie();
   }
 
@@ -29,7 +29,7 @@ class Help extends Component {
     });
   }
 
-  getHelp(){
+  getHelp() {
     return;
   }
 
