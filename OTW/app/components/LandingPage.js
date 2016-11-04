@@ -4,63 +4,84 @@ import {
   View,
   Image,
   Text,
-  TouchableHighlight,
-  Dimensions
+  TouchableHighlight
 } from 'react-native';
 
 import Button from './Button';
-import SignIn from './SignIn';
 
 const LandingPage = ({_handleForwardAction}) => (
-  <View style={styles.fullPageView}>
-    <Image source={require('../assets/LoginBG.jpg')} style={styles.background}></Image>
-    <View style={styles.imageContainer}>
-      <Image source={require('../assets/CompassWordmark.png')} style={styles.header}></Image>
-    </View>
-      
-      <Button
-        customStyles={{button: styles.loginButton, buttonText: styles.loginButtonText}}
-        label='Sign In'
-        onPress={() => _handleForwardAction('signIn')}
-      />
-  </View>
+    <Image source={require('../assets/background2_Fotor.png')} style={styles.background}>
+    <Text style={styles.header}>OTW</Text>
+    <Text style={styles.tagLine}>never be alone</Text>
+    <Button
+      style={styles.button}
+      label='Sign In'
+      onPress={() => _handleForwardAction('signIn')}
+    />
+    <Button
+      label='Sign Up'
+      onPress={() => _handleForwardAction('signUp')}
+    />
+    <Text style={styles.footer}>Team Artemis 2016</Text>
+  </Image>
 )
 
-const styles = {
-  fullPageView: {
+const styles = StyleSheet.create({
+  background: {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
+    resizeMode: 'contain'
   },
-  background: {
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
-    resizeMode: 'contain',
-
-    position: 'absolute',
-    top: 0,
-    left: 0,
+  button: {
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 3,
+    shadowOffset: {
+      height: 2,
+      width: 1
+    }
   },
   header: {
-    flex: 1,
-    width: Dimensions.get("window").width - 100,
-    height: undefined,
-    resizeMode: 'contain',
-  },
-  imageContainer: {
-    height: 100,
-  },
-  loginButton: {
-    backgroundColor: 'transparent',
-    width: Dimensions.get("window").width - 140,
-  },
-  loginButtonText: {
+    fontSize: 70,
+
     color: 'white',
-    fontWeight: 'bold'
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 3,
+    shadowOffset: {
+      height: 2,
+      width: 1
+    }
+  },
+  tagLine: {
+    fontSize: 20,
+    color: 'white',
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 3,
+    shadowOffset: {
+      height: 2,
+      width: 1
+    }
+  },
+  footer: {
+    fontSize: 15,
+    color: 'white',
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0)',
+    shadowColor: "#000000",
+    shadowOpacity: 0.8,
+    shadowRadius: 3,
+    shadowOffset: {
+      height: 2,
+      width: 1
+    }
   }
-};
+});
 
 export default LandingPage;
