@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
   return {
     user: state.userState
   };
-}
+};
 
 const UserBarContainer = connect(
   mapStateToProps

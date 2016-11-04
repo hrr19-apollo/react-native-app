@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
   return {
     navigation: state.navigationState,
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     popRoute: () => dispatch(pop()),
     updateUser: () => dispatch()
   };
-}
+};
 
 const NavRootContainer = connect(
   mapStateToProps,

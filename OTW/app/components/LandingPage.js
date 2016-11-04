@@ -24,7 +24,7 @@ const LandingPage = ({_handleForwardAction}) => (
     />
     <Text style={styles.footer}>Team Artemis 2016</Text>
   </Image>
-)
+);
 
 const styles = StyleSheet.create({
   background: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   },
   button: {
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     color: 'white',
     alignSelf: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     color: 'white',
     alignSelf: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     color: 'white',
     alignSelf: 'center',
     backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {

@@ -6,18 +6,15 @@ const INITIAL_STATE = Map({
   name: 'Guest'
 });
 
-export default function userState(state=INITIAL_STATE, action) {
-  switch(action.type) {
-    case UPDATE_USER: {
-      return Map(action.user);
-    } break;
+export default function userState(state = INITIAL_STATE, action) {
+  switch (action.type) {
+  case UPDATE_USER: 
+    return Map(action.user);
 
-    case REMOVE_USER: {
-      return null;
-    } break;
+  case REMOVE_USER: 
+    return null;
 
-    default: {
-      return state;
-    }
+  default: 
+    return state;
   }
 }

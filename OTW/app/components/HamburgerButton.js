@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     fontWeight: 'bold',
-    textShadowColor: "#000000",
+    textShadowColor: '#000000',
     textShadowRadius: 1,
     textShadowOffset: {
       height: 0.5,
       width: 0.5
     }
   }
-})
+});
 
 
 

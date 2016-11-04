@@ -31,7 +31,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

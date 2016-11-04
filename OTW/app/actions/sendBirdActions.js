@@ -6,39 +6,46 @@ import {
   GET_MESSAGES,
 } from './actionTypes';
 
-export function updateSendBirdUsers(users) {
+const updateSendBirdUsers = (users) => {
   return {
     type: UPDATE_SENDBIRD_USERS,
     users
   };
-}
+};
 
-export function updateFriendsList(user){
+const updateFriendsList = (user) => { 
   return {
     type: ADD_REMOVE_FRIEND_TO_LIST,
     user
   };
-}
+};
 
-export function updateChannelList(channel){
+const updateChannelList = (channel) => { 
   return {
     type: ADD_REMOVE_CHANNEL,
     channel
   };
-}
+};
 
-export function updateCurrentMessage(message){
+const updateCurrentMessage = (message) => { 
   return {
     type: SEND_MESSAGE,
     message
   };
-}
+};
 
-export function updateMessageList(messages){
+const updateMessageList = (messages) => { 
   return {
     type: GET_MESSAGES,
     messages
   };
-}
+};
 
+export { 
+  updateSendBirdUsers,
+  updateFriendsList,
+  updateChannelList,
+  updateCurrentMessage,
+  updateMessageList
+};
 

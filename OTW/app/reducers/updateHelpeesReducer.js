@@ -6,14 +6,12 @@ const initialState = List();
 
 const helpeesState = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_HELPEES: {
-      return List(action.helpees);
-    } break;
+  case UPDATE_HELPEES:
+    return List(action.helpees);
 
-    default: {
-      return state;
-    }
+  default: 
+    return state;
   }
-}
+};
 
 export default helpeesState;

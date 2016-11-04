@@ -9,14 +9,14 @@ const mapStateToProps = (state) => {
   return {
     user: state.userState
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     updateUser: (user) => dispatch(updateUser(user)),
     removeUser: () => dispatch(removeUser())
   };
-}
+};
 
 const SignInContainer = connect(
   mapStateToProps,
