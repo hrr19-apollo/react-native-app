@@ -30,7 +30,8 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-         label="Log Out"
+        onPress={() => _handleForwardAction('logOut')}
+        label="Log Out"
       />
     </View>
   );
