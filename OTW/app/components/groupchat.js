@@ -15,7 +15,7 @@ var windowSize = Dimensions.get('window')
 var sb = SendBird.getInstance();
 var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-class GroupChat extends Component{
+class GroupChat extends Component {
   constructor(props){
     super(props)
   	this.state = {
@@ -188,7 +188,7 @@ class GroupChat extends Component{
       alignItems: 'center',
       backgroundColor: 'white',
       paddingTop: 20,
-      borderBottomWidth: 1, 
+      borderBottomWidth: 0.5, 
       borderBottomColor: '#c3c1c1'
     },
     chatContainer: {
@@ -202,7 +202,7 @@ class GroupChat extends Component{
       justifyContent: 'space-around',
       alignItems: 'center',
       backgroundColor: 'white',
-      borderTopWidth: 1, 
+      borderTopWidth: 0.5, 
       borderTopColor: '#c3c1c1'
     },
     textContainer: {

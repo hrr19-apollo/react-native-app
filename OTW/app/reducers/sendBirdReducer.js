@@ -1,4 +1,4 @@
-import {Map, List, immutable} from 'immutable';
+import { Map, List, immutable } from 'immutable';
 import {
   UPDATE_SENDBIRD_USERS,
   ADD_REMOVE_FRIEND_TO_LIST,
@@ -11,8 +11,8 @@ import {
 const INITIAL_STATE = Map({
   users: List(),
   friendsList: List(),
-  channel:null,
-  myMessage:'',
+  channel: null,
+  myMessage: '',
   messageList: List(),
 
 });
