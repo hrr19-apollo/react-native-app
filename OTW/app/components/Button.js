@@ -16,7 +16,7 @@ const Button = ({label, onPress, customStyles}) => {
 
   return (
     <TouchableHighlight
-      underlayColor='#35b5ff'
+      underlayColor='transparent'
       onPress={onPress}
       style={buttonStyle}>
       <Text style={customStyles && customStyles.buttonText || styles.buttonText}>{label}</Text>
