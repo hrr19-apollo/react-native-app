@@ -12,20 +12,20 @@ import {
 
 import {sendBirdGetUsers, sendBirdCreateGroupChat} from '../utils/sendBird';
 
-var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 })
-class InviteFriends extends Component{
-  constructor(props){
-    super(props)
+var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2 });
+class InviteFriends extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
       dataSource: ds.cloneWithRows([]),
     };
   }
 
-  componentWillMount(){
+  componentWillMount() {
     this.getUsers();
   }
 
-  getUsers(){
+  getUsers() {
     var thisComponent = this;
     sendBirdGetUsers(function(users) {
       thisComponent.setState({
@@ -36,11 +36,11 @@ class InviteFriends extends Component{
 
   createChatRoom() {
     var thisComponent = this;
-    sendBirdCreateGroupChat(function(channel){
-      if(channel){
+    sendBirdCreateGroupChat(function(channel) {
+      if (channel) {
         thisComponent.props.updateChannelList(channel);
       }
-      thisComponent.props._handleForwardAction('groupChat')
+      thisComponent.props._handleForwardAction('groupChat');
     });
   }
 
@@ -52,14 +52,14 @@ class InviteFriends extends Component{
           enableEmptySections={true}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => {
-            return(
+            return (
               <TouchableHighlight
                 tyle={styles.button}
-                onPress= {() => {this.props.updateFriendsList(rowData)}}
+                onPress= {() => { this.props.updateFriendsList(rowData); }}
               >
                 <Text style={styles.label}>{rowData.nickname} </Text>
               </TouchableHighlight>
-            )
+            );
           }}
         />
 
@@ -77,7 +77,7 @@ class InviteFriends extends Component{
 
           <TouchableHighlight
           style={styles.button}
-          onPress={ () => this.props._handleNavigate({type:'pop'}) }
+          onPress={ () => this.props._handleNavigate({type: 'pop'}) }
           >
             <Text style={styles.label}>Cancel</Text>
           </TouchableHighlight>
@@ -116,7 +116,7 @@ var styles = StyleSheet.create({
     //alignSelf: 'center',
     //textAlign: 'center',
     marginTop: 100,
-    marginBottom:-75
+    marginBottom: -75
   }
 });
 

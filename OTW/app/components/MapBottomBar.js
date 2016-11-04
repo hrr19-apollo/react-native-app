@@ -18,7 +18,7 @@ const MapBottomBar = ({helpee}) => (
 
 const styles = {
   shadow: {
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {
@@ -33,6 +33,7 @@ const styles = {
     alignItems: 'center',
     height: 120,
   }
-}
+};
+
 
 export default MapBottomBar;

@@ -7,11 +7,12 @@ const INITIAL_STATE = Map({
   long: 'unknown'
 });
 
-export default function locationState (state=INITIAL_STATE, action) {
-  switch(action.type) {
-    case UPDATE_LOCATION:
-      return Map({lat: action.loc.lat, long: action.loc.long});
-    default:
-      return state;
+export default function locationState (state = INITIAL_STATE, action) {
+  switch (action.type) {
+  case UPDATE_LOCATION: 
+    return Map({lat: action.loc.lat, long: action.loc.long});
+
+  default: 
+    return state;
   }
 }

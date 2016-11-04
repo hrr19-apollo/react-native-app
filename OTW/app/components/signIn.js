@@ -24,7 +24,6 @@ class SignIn extends Component {
 
   render() {
     console.log('check the props for handleNavigate', this.props);
-
     if (this.props.user.get('name') === 'Guest') {
       return (
         <View style={styles.container}>

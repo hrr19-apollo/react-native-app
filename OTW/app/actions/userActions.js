@@ -1,14 +1,16 @@
 import {UPDATE_USER, REMOVE_USER} from './actionTypes';
 
-export function updateUser(user) {
+const updateUser = (user) => {
   return {
     type: UPDATE_USER,
     user
   };
-}
+};
 
-export function removeUser() {
+const removeUser = () => {
   return {
     type: REMOVE_USER
-  }
-}
+  };
+};
+
+export { updateUser, removeUser };

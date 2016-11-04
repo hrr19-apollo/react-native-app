@@ -41,6 +41,5 @@ buck-out/
 android/app/libs
 android/keystores/debug.keystore
 
-yarn.lock
-
 firebaseConfig.js
+sendBirdConfig.js
