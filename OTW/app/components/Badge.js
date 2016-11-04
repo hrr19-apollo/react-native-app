@@ -18,7 +18,7 @@ const Badge = ({user}) => (
   </View>
 );
 
-const styles = StyleSheet.create({
+const styles = {
   user: {
     textAlign: 'center',
     margin: 10,
@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 8
   }
-});
+};
 
 export default Badge;

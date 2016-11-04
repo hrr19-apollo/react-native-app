@@ -5,18 +5,18 @@ import {
   StyleSheet } from 'react-native'
 
 const Button = ({label, onPress, customStyles}) => {
-  let buttonStyle;
-  if (customStyles && customStyles.button) {
-    buttonStyle = {...styles.button, ...customStyles.button};
-    text = {...styles.buttonText, ...customStyles.buttonText}
-  } else {
-    buttonStyle = styles.button;
-    text = styles.buttonText;
-  }
+  // let buttonStyle;
+  // if (customStyles && customStyles.button) {
+  //   buttonStyle = {...styles.button, ...customStyles.button};
+  //   text = {...styles.buttonText, ...customStyles.buttonText}
+  // } else {
+    let buttonStyle = styles.button;
+    let text = styles.buttonText;
+  // }
 
   return (
     <TouchableHighlight
-      underlayColor='#35b5ff'
+      underlayColor='transparent'
       onPress={onPress}
       style={buttonStyle}>
       <Text style={customStyles && customStyles.buttonText || styles.buttonText}>{label}</Text>

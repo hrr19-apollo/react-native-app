@@ -11,7 +11,7 @@ HamburgerButton = ({onPress}) => (
   />
 );
 
-const styles = StyleSheet.create({
+const styles = {
   button: {
     marginLeft: 15,
     justifyContent: 'flex-start',
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
       width: 0.5
     }
   }
-})
+}
 
 
 

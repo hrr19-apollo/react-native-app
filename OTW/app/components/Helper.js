@@ -62,7 +62,7 @@ class Helper extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     backgroundColor: '#F8F8FF',
@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   }
-});
+};
 
 export default Helper;

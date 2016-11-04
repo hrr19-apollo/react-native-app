@@ -32,7 +32,7 @@ class UserBar extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   shadow: {
     shadowColor: "#000000",
     shadowOpacity: 0.8,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
       width: 0.5
     }
   }
-})
+}
 
 export default UserBar;
 

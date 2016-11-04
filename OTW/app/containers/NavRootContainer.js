@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import {push, pop} from '../actions/navActions';
+import { push, pop } from '../actions/navActions';
 import NavRoot from '../components/NavRoot';
 
 function mapStateToProps(state){

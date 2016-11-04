@@ -20,7 +20,7 @@ const BottomBar = ({location}) => (
   </View>
 );
 
-const styles = StyleSheet.create({
+const styles = {
   shadow: {
     shadowColor: "#000000",
     shadowOpacity: 0.8,
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 120,
   }
-})
+}
 
 export default BottomBar;
