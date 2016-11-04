@@ -4,19 +4,30 @@ import {
   TouchableHighlight,
   StyleSheet } from 'react-native';
 
-const Button = ({label, onPress, customStyles}) => (
-  <TouchableHighlight
-    underlayColor='#35b5ff'
-    onPress={onPress}
-    style={customStyles && customStyles.button || [styles.button, styles.shadow]}>
-    <Text style={customStyles && customStyles.buttonText || styles.buttonText}>{label}</Text>
-  </TouchableHighlight>
-);
+const Button = ({label, onPress, customStyles}) => {
+  let buttonStyle;
+  if (customStyles && customStyles.button) {
+    buttonStyle = {...styles.button, ...customStyles.button};
+    text = {...styles.buttonText, ...customStyles.buttonText};
+  } else {
+    buttonStyle = styles.button;
+    text = styles.buttonText;
+  }
 
-const styles = StyleSheet.create({
+  return (
+    <TouchableHighlight
+      underlayColor='#35b5ff'
+      onPress={onPress}
+      style={buttonStyle}>
+      <Text style={customStyles && customStyles.buttonText || styles.buttonText}>{label}</Text>
+    </TouchableHighlight>
+  );
+};
+
+const styles = {
   buttonText: {
     fontSize: 14,
-    color: '#F8F8FF',
+    color: 'black',
     alignSelf: 'center',
     fontWeight: 'bold'
   },
@@ -24,23 +35,14 @@ const styles = StyleSheet.create({
     height: 45,
     width: 100,
     flexDirection: 'row',
-    backgroundColor: '#ff5700cc',
+    backgroundColor: 'white',
     borderColor: 'white',
-    borderWidth: 1,
-    borderRadius: 8,
+    borderWidth: 2,
     marginBottom: 10,
     marginTop: 10,
-    justifyContent: 'center'
-  },
-  shadow: {
-    shadowColor: '#000000',
-    shadowOpacity: 0.8,
-    shadowRadius: 3,
-    shadowOffset: {
-      height: 2,
-      width: 1
-    }
+    justifyContent: 'center',
+    alignItems: 'center'
   }
-});
+};
 
 export default Button;

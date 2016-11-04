@@ -5,16 +5,28 @@
  */
 
 module.exports = {
-  env: {
+  'env': {
     'es6': true
   },
-  parserOptions: {
-    sourceType: "module",  
-    ecmaFeatures: {
-      'jsx': true
+  'parser': 'babel-eslint',
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'sourceType': 'module',  
+    'ecmaFeatures': {
+      'jsx': true,
+      'spread': true,
+      'objectLiteralComputedProperties': true,
+      'objectLiteralDuplicateProperties': true,
+      'objectLiteralShorthandMethods': true,
+      'objectLiteralShorthandProperties': true,
+      "experimentalObjectRestSpread": true
     }
   },
-  rules: {
+  'plugins': [
+    'react'
+  ],
+  'rules': {
+    'strict': 0,
     /* Indentation */
     'no-mixed-spaces-and-tabs': 2,
     'indent': [2, 2],

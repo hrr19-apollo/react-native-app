@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "babel-eslint": "^7.1.0",
+    "eslint-plugin-react": "^6.5.0",
     "firebase": "^3.5.2",
     "immutable": "^3.8.1",
     "react": "15.3.2",
