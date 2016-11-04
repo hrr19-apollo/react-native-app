@@ -15,6 +15,13 @@ export default function getComponent(routeKey, _handleNavigate, _handleBackActio
   switch (routeKey) {
   case 'home':
     return LandingPage({_handleNavigate, _handleForwardAction});
+      // return <HelpContainer
+      //   _handleNavigate={_handleNavigate}
+      //   _handleForwardAction={_handleForwardAction}
+      //   _handleBackAction={_handleBackAction}
+      //   openControlPanel={openControlPanel}
+      //   closeControlPanel={closeControlPanel}
+      // />
   case 'signIn':
     return <SignInContainer
           _handleNavigate={_handleNavigate}

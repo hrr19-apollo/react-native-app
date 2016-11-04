@@ -109,14 +109,14 @@ class GroupChat extends Component {
 
         <View style={styles.topContainer}>
           <TouchableHighlight
-            underlayColor={'#DEC025'}
+            underlayColor={'transparent'}
             onPress={ () => this.props._handleNavigate({type: 'pop'}) }
             style={{marginLeft: 15}}
             >
-            <Text style={styles.backBorder}> Back </Text>
+            <Text style={styles.back}> BACK </Text>
           </TouchableHighlight>
           <TouchableHighlight
-            underlayColor={'#DEC025'}
+            underlayColor={'transparent'}
             onPress={this.onDisconnect.bind(this)}
             style={{marginLeft: 15}}
             >
@@ -148,7 +148,7 @@ class GroupChat extends Component {
         <View style={styles.inputContainer}>
           <View style={{flex: 1, justifyContent: 'center'}}>
             <TextInput
-              placeholder={'text here'}
+              placeholder={'Type a message'}
               style={styles.input}
               onChangeText={(myMessage) => this.setState({myMessage})}
               value={this.state.myMessage}
@@ -158,10 +158,10 @@ class GroupChat extends Component {
 
           <View style={styles.sendContainer}>
             <TouchableHighlight
-              underlayColor={'#4e4273'}
+              underlayColor={'transparent'}
               onPress={this.sendMessage.bind(this)}
-              >
-              <Text>SEND</Text>
+              style={{alignItems: 'center', justifyContent: 'center'}}>
+              <Text style={styles.send}>SEND</Text>
             </TouchableHighlight>
           </View>
         </View>
@@ -169,25 +169,24 @@ class GroupChat extends Component {
       </View>
       );
   }
-
-
-
 }
 
-
-var styles = StyleSheet.create({
+var styles = {
   mainContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'stretch',
+    backgroundColor: 'white',
   },
   topContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: '#DEC016',
+    backgroundColor: 'white',
     paddingTop: 20,
+    borderBottomWidth: 0.5, 
+    borderBottomColor: '#c3c1c1'
   },
   chatContainer: {
     flex: 11,
@@ -199,7 +198,9 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    backgroundColor: '#DEC016'
+    backgroundColor: 'white',
+    borderTopWidth: 0.5, 
+    borderTopColor: '#c3c1c1'
   },
   textContainer: {
     flex: 1,
@@ -210,23 +211,20 @@ var styles = StyleSheet.create({
     paddingRight: 10
   },
   input: {
-    width: windowSize.width - 70,
-    paddingRight: 10,
-    paddingLeft: 10,
-    paddingTop: 5,
+    width: windowSize.width - 80,
     height: 32,
-    borderColor: '#000',
+    borderColor: 'white',
     borderWidth: 1,
-    borderRadius: 2,
     alignSelf: 'center',
-    backgroundColor: '#ffffff'
+    backgroundColor: 'white'
   },
-  backBorder: {
-    borderColor: '#000',
-    borderWidth: 1,
-    borderRadius: 2
+  back: {
+    color: '#36A8FF'
   },
-});
+  send: {
+    color: '#36A8FF'
+  }
+};
 
 
 module.exports = GroupChat;

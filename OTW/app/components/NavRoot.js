@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {NavigationExperimental} from 'react-native';
+import React, { Component } from 'react';
+import { NavigationExperimental } from 'react-native';
 import Drawer from 'react-native-drawer';
 
 import getComponent from '../utils/getComponent';

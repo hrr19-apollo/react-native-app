@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+yarn.lock
 
 # Xcode
 #
@@ -39,8 +40,6 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
-
-yarn.lock
 
 firebaseConfig.js
 sendBirdConfig.js

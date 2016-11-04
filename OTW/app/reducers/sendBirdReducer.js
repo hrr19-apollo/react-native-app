@@ -1,4 +1,4 @@
-import {Map, List, immutable} from 'immutable';
+import { Map, List, immutable } from 'immutable';
 import {
   UPDATE_SENDBIRD_USERS,
   ADD_REMOVE_FRIEND_TO_LIST,
@@ -7,13 +7,12 @@ import {
   GET_MESSAGES,
 } from '../actions/actionTypes';
 
-
 const INITIAL_STATE = Map({
   users: List(),
   friendsList: List(),
   channel: null,
   myMessage: '',
-  messageList: List()
+  messageList: List(),
 });
 
 export default function sendBirdState (state = INITIAL_STATE, action) {
@@ -39,10 +38,8 @@ export default function sendBirdState (state = INITIAL_STATE, action) {
   case SEND_MESSAGE: 
     return state.set('myMessage', action.message);
 
-
   case GET_MESSAGES:
     return state.set('messageList', state.get(messageList).concat(action.messages));
-
 
   default: 
     return state;
