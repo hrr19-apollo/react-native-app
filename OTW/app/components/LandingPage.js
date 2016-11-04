@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import Button from './Button';
+import SignIn from './SignIn';
 
 const LandingPage = ({_handleForwardAction}) => (
   <View style={styles.fullPageView}>
@@ -18,14 +19,14 @@ const LandingPage = ({_handleForwardAction}) => (
     </View>
       
       <Button
-        style={styles.button}
+        customStyles={{button: styles.loginButton, buttonText: styles.loginButtonText}}
         label='Sign In'
         onPress={() => _handleForwardAction('signIn')}
       />
   </View>
 )
 
-const styles = StyleSheet.create({
+const styles = {
   fullPageView: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -43,15 +44,6 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
   },
-  button: {
-    shadowColor: "#000000",
-    shadowOpacity: 0.8,
-    shadowRadius: 3,
-    shadowOffset: {
-      height: 2,
-      width: 1
-    }
-  },
   header: {
     flex: 1,
     width: Dimensions.get("window").width - 100,
@@ -61,32 +53,14 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: 100,
   },
-  tagLine: {
-    fontSize: 20,
-    color: 'white',
-    alignSelf: 'center',
-    backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
-    shadowOpacity: 0.8,
-    shadowRadius: 3,
-    shadowOffset: {
-      height: 2,
-      width: 1
-    }
+  loginButton: {
+    backgroundColor: 'transparent',
+    width: Dimensions.get("window").width - 140,
   },
-  footer: {
-    fontSize: 15,
+  loginButtonText: {
     color: 'white',
-    alignSelf: 'center',
-    backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
-    shadowOpacity: 0.8,
-    shadowRadius: 3,
-    shadowOffset: {
-      height: 2,
-      width: 1
-    }
+    fontWeight: 'bold'
   }
-});
+};
 
 export default LandingPage;
