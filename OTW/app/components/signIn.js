@@ -27,11 +27,13 @@ class SignIn extends Component {
 
     if (this.props.user.get('name') === 'Guest') {
       return (
-        <GoogleSigninButton
-        style={{width: 212, height: 48}}
-        size={GoogleSigninButton.Size.Standard}
-        color={GoogleSigninButton.Color.Dark}
-        onPress={this._signIn.bind(this)} />
+        <View style={styles.container}>
+          <GoogleSigninButton
+          style={{width: 212, height: 48}}
+          size={GoogleSigninButton.Size.Standard}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn.bind(this)} />
+        </View>
       );
     } else {
       return (
@@ -82,9 +84,9 @@ class SignIn extends Component {
       this.props.updateUser(user);
       this.props._handleForwardAction('help');
       //FIXME: sendbird not working
-      sendBirdConnect(user.email, user.name, () => {
-        console.log('sendbird connection successful');
-      });
+      // sendBirdConnect(user.email, user.name, () => {
+      //   console.log('sendbird connection successful');
+      // });
     })
     .catch((err) => {
       console.log('Wrong info', err);
