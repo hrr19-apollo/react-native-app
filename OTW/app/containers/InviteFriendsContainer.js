@@ -8,7 +8,7 @@ import {
   updateChannelList
 } from '../actions/sendBirdActions'
 
-const mapStateToProps = function(state){
+const mapStateToProps = (state) => {
   return {
     sendBirdUsers: state.sendBirdState.get('users'),
     friendsList: state.sendBirdState.get('friendsList'),
@@ -16,12 +16,12 @@ const mapStateToProps = function(state){
   };
 }
 
-const mapDispatchToProps = function(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     updateSendBirdUsers: (users) => dispatch(updateSendBirdUsers(users)),
    	updateFriendsList: (user) => dispatch(updateFriendsList(user)),
     updateChannelList: (channel) => dispatch(updateChannelList(channel))
-  }
+  };
 }
 
 const InviteFriendsContainer = connect(

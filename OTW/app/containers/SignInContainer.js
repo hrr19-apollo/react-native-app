@@ -4,14 +4,14 @@ import {connect} from 'react-redux';
 import {updateUser, removeUser} from '../actions/userActions';
 import SignIn from '../components/SignIn';
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   console.log('state', state);
   return {
     user: state.userState
   };
 }
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     updateUser: (user) => dispatch(updateUser(user)),
     removeUser: () => dispatch(removeUser())

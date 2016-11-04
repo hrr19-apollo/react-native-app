@@ -5,11 +5,14 @@ import {UPDATE_HELPEES} from '../actions/actionTypes';
 const initialState = List();
 
 const helpeesState = (state = initialState, action) => {
-  switch(action.type){
-    case UPDATE_HELPEES:
+  switch (action.type) {
+    case UPDATE_HELPEES: {
       return List(action.helpees);
-    default:
+    } break;
+
+    default: {
       return state;
+    }
   }
 }
 
