@@ -5,6 +5,6 @@ const updateHelpees = (helpees) => {
     type: UPDATE_HELPEES,
     helpees
   };
-}
+};
 
 export default updateHelpees;

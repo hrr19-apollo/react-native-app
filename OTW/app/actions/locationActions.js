@@ -5,6 +5,6 @@ const updateLocation = ({lat, long}) => {
     type: UPDATE_LOCATION,
     loc: { lat, long }
   };
-}
+};
 
 export { updateLocation };
