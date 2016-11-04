@@ -23,17 +23,15 @@ class SignIn extends Component {
   }
 
   render() {
-    console.log('check the props for handleNavigate',this.props);
+    console.log('check the props for handleNavigate', this.props);
 
     if (this.props.user.get('name') === 'Guest') {
       return (
-        <View style={styles.container}>
         <GoogleSigninButton
         style={{width: 212, height: 48}}
         size={GoogleSigninButton.Size.Standard}
         color={GoogleSigninButton.Color.Dark}
         onPress={this._signIn.bind(this)} />
-        </View>
       );
     } else {
       return (
