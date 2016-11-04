@@ -1,8 +1,8 @@
 import SendBird from 'sendbird';
+import { APP_ID } from './sendbirdConfig.js';
 import store from '../store.js';
-const appId = '784B5E97-7863-4562-B5C1-DE3D6B6491A8';
-const sb = new SendBird({appId: appId});
 
+const sb = new SendBird({appId: APP_ID});
 
 export function sendBirdConnect(userEmail, username, cb) {
   sb.connect(userEmail, function(user, err){
