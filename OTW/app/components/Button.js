@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 
 const Button = ({label, onPress, customStyles}) => {
-<<<<<<< HEAD
   let buttonStyle;
   if (customStyles && customStyles.button) {
     buttonStyle = {...styles.button, ...customStyles.button};

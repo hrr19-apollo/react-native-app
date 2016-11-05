@@ -19,6 +19,8 @@ class InviteFriends extends Component {
     this.state = {
       dataSource: ds.cloneWithRows([]),
     };
+
+    this.tempFriendsList = []
   }
 
   componentWillMount() {
