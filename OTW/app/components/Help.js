@@ -9,7 +9,8 @@ import {
   View,
   TextInput,
   TouchableHighlight,
-  MapView
+  MapView,
+  Dimensions
 } from 'react-native';
 
 
@@ -18,7 +19,7 @@ import Button from './Button';
 import BottomBarContainer from '../containers/BottomBarContainer';
 
 class Help extends Component {
-  getHelp(){
+  getHelp() {
     _addHelpie();
   }
 
@@ -29,7 +30,7 @@ class Help extends Component {
     });
   }
 
-  getHelp(){
+  getHelp() {
     return;
   }
 
@@ -41,19 +42,18 @@ class Help extends Component {
         />
 
         <MapView
-          style={{height: 450, margin: 5}}
+          style={{height: Dimensions.get('window').height}}
           showsUserLocation={true}
           followUserLocation={true}
           onRegionChangeComplete={this.onRegionChangeComplete.bind(this)}
         />
 
-        <BottomBarContainer/>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     backgroundColor: '#F8F8FF',
@@ -68,6 +68,6 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   }
-});
+};
 
 export default Help;

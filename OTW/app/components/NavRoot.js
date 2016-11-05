@@ -13,7 +13,6 @@ class NavRoot extends Component {
     super(props);
     this._renderScene = this._renderScene.bind(this);
     this._handleBackAction = this._handleBackAction.bind(this);
-    // this._handleForwardAction = this._handleForwardAction.bind(this)
   }
 
   _renderScene(props) {
@@ -41,26 +40,25 @@ class NavRoot extends Component {
   }
 
   _handleNavigate(action) {
-    console.log('what the f is this',this);
-    switch(action && action.type) {
-      case 'push':
-        this._handleForwardAction(action.route.key);
-        return true;
-      case 'back':
-      case 'pop':
-        return this._handleBackAction();
-      default:
-        return false;
+    switch (action && action.type) {
+    case 'push':
+      this._handleForwardAction(action.route.key);
+      return true;
+    case 'back':
+    case 'pop':
+      return this._handleBackAction();
+    default:
+      return false;
     }
   }
 
-  closeControlPanel = () => {
-    this._drawer.close()
-  };
+  closeControlPanel() {
+    this._drawer.close();
+  }
 
-  openControlPanel = () => {
-    this._drawer.open()
-  };
+  openControlPanel() {
+    this._drawer.open();
+  }
 
   render() {
     return (
@@ -77,10 +75,9 @@ class NavRoot extends Component {
         closedDrawerOffset={-3}
         styles={drawerStyles}
         tweenHandler={(ratio) => ({
-          main: { opacity:(2-ratio)/2 }
+          main: { opacity: (2 - ratio) / 2 }
         })}
-        side='left'
-      >
+        side='left'>
         <NavigationCardStack
           direction='vertical'
           navigationState={this.props.navigation}
@@ -96,6 +93,6 @@ const drawerStyles = {
   drawer: { shadowColor: '#000000', shadowOpacity: 0.5, shadowRadius: 3},
   main: {paddingLeft: 3},
   justifyContent: 'flex-start',
-}
+};
 
 export default NavRoot;

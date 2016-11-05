@@ -20,19 +20,19 @@ import Button from './Button';
 import MapBottomBar from '../components/MapBottomBar';
 
 class Helper extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.helpee = {
       title: '',
       message: ''
     };
   }
 
-  updateHelpee(title = '', message = ''){
+  updateHelpee(title = '', message = '') {
     this.helpee = {
       title,
       message
-    }
+    };
     this.forceUpdate(); //Note: super hacky but works fix later...
   }
 
@@ -50,9 +50,9 @@ class Helper extends Component {
           minDelta={.02}
           annotations={this.props.helpees.toArray().map((item) => {
             const superUpdate = this.updateHelpee.bind(this);
-            return Object.assign(item, {onFocus:function() {
-              superUpdate(this.title, this.message)
-            }})
+            return Object.assign(item, {onFocus: function() {
+              superUpdate(this.title, this.message);
+            }});
           })}
         />
 
@@ -62,7 +62,7 @@ class Helper extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flex: 1,
     backgroundColor: '#F8F8FF',
@@ -77,6 +77,6 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   }
-});
+};
 
 export default Helper;
