@@ -3,9 +3,9 @@ import {Text, View, StyleSheet} from 'react-native';
 
 import Button from './Button';
 import Badge from './Badge';
-import RemoveUser from '../actions/userActions';
+import removeUser from '../actions/userActions';
 
-const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
+const Menu = ({_handleForwardAction, closeControlPanel, user, removeUser}) => {
   return (
     <View style={styles.container}>
       <Badge user={user} />
@@ -31,7 +31,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={() => _handleForwardAction('logOut')}
+        onPress={removeUser}
         label="Log Out"
       />
     </View>
