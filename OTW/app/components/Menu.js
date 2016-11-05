@@ -7,7 +7,17 @@ import RemoveUser from '../actions/userActions';
 import REMOVE_USER from '../actions/actionTypes';
 import SignIn from './SignIn';
 
-const Menu = ({_handleForwardAction, closeControlPanel, user, SignIn}) => {
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+import {updateUser, removeUser} from '../actions/userActions';
+
+function logout() {
+  GoogleSignin.revokeAccess()
+  .then(() => GoogleSignin.signOut())
+  .then(this.props.removeUser.bind(this))
+  .done();
+}
+
+const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
   return (
     <View style={styles.container}>
       <Badge user={user} />
@@ -33,7 +43,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user, SignIn}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={() => _handleForwardAction('SignIn')}
+        onPress={logout}
         label="Log Out"
       />
     </View>
