@@ -72,7 +72,7 @@ class InviteFriends extends Component{
           style={styles.button}
           onPress={ this.createChatRoom.bind(this) }
           >
-            <Text style={styles.label}> Send</Text>
+            <Text style={styles.label}>Send</Text>
           </TouchableHighlight>
 
           <TouchableHighlight
@@ -96,14 +96,13 @@ var styles = StyleSheet.create({
   },
 
   button: {
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    borderWidth: 1,
-    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
     borderColor: '#000',
     padding: 5,
     marginTop: 5,
-    backgroundColor: '#DEC016'
+    backgroundColor: 'white'
   },
 
   label: {

@@ -14,14 +14,12 @@ import LandingPage from '../components/LandingPage';
 export default function getComponent(routeKey, _handleNavigate, _handleBackAction, _handleForwardAction, openControlPanel, closeControlPanel) {
   switch (routeKey){
     case 'home':
-      return LandingPage({_handleNavigate, _handleForwardAction});
-      // return <HelpContainer
-      //   _handleNavigate={_handleNavigate}
-      //   _handleForwardAction={_handleForwardAction}
-      //   _handleBackAction={_handleBackAction}
-      //   openControlPanel={openControlPanel}
-      //   closeControlPanel={closeControlPanel}
-      // />
+      // return LandingPage({_handleNavigate, _handleForwardAction});
+      return <InviteFriendsContainer
+      _handleNavigate={_handleNavigate}
+      _handleForwardAction={_handleForwardAction}
+      _handleBackAction={_handleBackAction}
+      />
     case 'signIn':
       return <SignInContainer
           _handleNavigate={_handleNavigate}

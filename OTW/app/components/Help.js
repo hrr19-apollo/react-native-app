@@ -47,7 +47,6 @@ class Help extends Component {
           onRegionChangeComplete={this.onRegionChangeComplete.bind(this)}
         />
 
-        <BottomBarContainer/>
       </View>
     );
   }
