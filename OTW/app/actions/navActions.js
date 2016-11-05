@@ -1,14 +1,16 @@
 import {PUSH_ROUTE, POP_ROUTE} from './actionTypes.js';
 
-export function push(route) {
+const push = (route) => {
   return {
     type: PUSH_ROUTE,
     route
-  }
-}
+  };
+};
 
-export function pop() {
+const pop = () => {
   return {
     type: POP_ROUTE
-  }
-}
+  };
+};
+
+export { pop, push };

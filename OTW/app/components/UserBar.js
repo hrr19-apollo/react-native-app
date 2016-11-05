@@ -13,9 +13,9 @@ import Badge from './Badge';
 
 class UserBar extends Component {
   render() {
-    const user = this.props.user
+    const user = this.props.user;
     if (user) {
-       return (
+      return (
       <View style={[styles.bar, styles.shadow]}>
         <View style={styles.badge}>
           <HamburgerButton
@@ -27,14 +27,14 @@ class UserBar extends Component {
       </View>
     );
     } else {
-      return (<View><Text>Guest</Text></View>)
+      return (<View><Text>Guest</Text></View>);
     }
   }
 }
 
 const styles = {
   shadow: {
-    shadowColor: "#000000",
+    shadowColor: '#000000',
     shadowOpacity: 0.8,
     shadowRadius: 3,
     shadowOffset: {
@@ -71,14 +71,14 @@ const styles = {
     fontSize: 18,
     fontStyle: 'italic',
     fontWeight: 'bold',
-    textShadowColor: "#000000",
+    textShadowColor: '#000000',
     textShadowRadius: 1,
     textShadowOffset: {
       height: 1,
       width: 0.5
     }
   }
-}
+};
 
 export default UserBar;
 
