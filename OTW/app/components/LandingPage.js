@@ -16,7 +16,7 @@ const LandingPage = ({_handleForwardAction}) => (
     <Button
       style={styles.button}
       label='Sign In'
-      onPress={() => this._handleForwardAction.bind('signIn')}
+      onPress={() => _handleForwardAction('signIn')}
     />
     <Button
       label='Sign Up'
