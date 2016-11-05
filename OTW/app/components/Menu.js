@@ -3,6 +3,7 @@ import {Text, View, StyleSheet} from 'react-native';
 
 import Button from './Button';
 import Badge from './Badge';
+import RemoveUser from '../actions/userActions';
 
 const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
   return (
