@@ -10,14 +10,14 @@ import SignIn from './SignIn';
 import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 import {updateUser, removeUser} from '../actions/userActions';
 
-function logout() {
-  GoogleSignin.revokeAccess()
-  .then(() => GoogleSignin.signOut())
-  .then(this.props.removeUser.bind(this))
-  .done();
-}
-
 const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
+  function logout() {
+    GoogleSignin.revokeAccess()
+    .then(() => GoogleSignin.signOut())
+    .then(this.props.removeUser.bind(this))
+    .done();
+  }
+
   return (
     <View style={styles.container}>
       <Badge user={user} />
