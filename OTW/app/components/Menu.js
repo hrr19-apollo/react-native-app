@@ -5,8 +5,9 @@ import Button from './Button';
 import Badge from './Badge';
 import RemoveUser from '../actions/userActions';
 import REMOVE_USER from '../actions/actionTypes';
+import SignIn from './SignIn';
 
-const Menu = ({_handleForwardAction, closeControlPanel, user, RemoveUser}) => {
+const Menu = ({_handleForwardAction, closeControlPanel, user, SignIn}) => {
   return (
     <View style={styles.container}>
       <Badge user={user} />
@@ -32,7 +33,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user, RemoveUser}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={REMOVE_USER}
+        onPress={() => _handleForwardAction('SignIn')}
         label="Log Out"
       />
     </View>
