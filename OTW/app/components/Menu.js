@@ -3,9 +3,10 @@ import {Text, View, StyleSheet} from 'react-native';
 
 import Button from './Button';
 import Badge from './Badge';
-import removeUser from '../actions/userActions';
+import RemoveUser from '../actions/userActions';
+import REMOVE_USER from '../actions/actionTypes';
 
-const Menu = ({_handleForwardAction, closeControlPanel, user, removeUser}) => {
+const Menu = ({_handleForwardAction, closeControlPanel, user, RemoveUser}) => {
   return (
     <View style={styles.container}>
       <Badge user={user} />
@@ -31,7 +32,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user, removeUser}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={removeUser}
+        onPress={REMOVE_USER}
         label="Log Out"
       />
     </View>
