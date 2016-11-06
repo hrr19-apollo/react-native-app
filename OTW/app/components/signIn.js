@@ -9,9 +9,7 @@ import {
   Image
 } from 'react-native';
 
-import {updateUser, removeUser} from '../actions/userActions';
-
-import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+//import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
 import {sendBirdConnect} from '../utils/sendBird';
 

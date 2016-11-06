@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
   Image,
   Text,
-  TouchableHighlight
+  TouchableHighlight,
+  Dimensions
 } from 'react-native';
 
 import Button from './Button';
+import SignIn from './SignIn';
 
 const LandingPage = ({_handleForwardAction}) => (
   <View style={styles.fullPageView}>
@@ -15,7 +17,7 @@ const LandingPage = ({_handleForwardAction}) => (
     <View style={styles.imageContainer}>
       <Image source={require('../assets/CompassWordmark.png')} style={styles.header}></Image>
     </View>
-
+      
       <Button
         customStyles={{button: styles.loginButton, buttonText: styles.loginButtonText}}
         label='Sign In'
@@ -24,8 +26,8 @@ const LandingPage = ({_handleForwardAction}) => (
   </View>
 );
 
-const styles = StyleSheet.create({
-  background: {
+const styles = {
+  fullPageView: {
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
@@ -55,19 +57,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     width: Dimensions.get('window').width - 140,
   },
-  footer: {
-    fontSize: 15,
+  loginButtonText: {
     color: 'white',
-    alignSelf: 'center',
-    backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: "#000000",
-    shadowOpacity: 0.8,
-    shadowRadius: 3,
-    shadowOffset: {
-      height: 2,
-      width: 1
-    }
+    fontWeight: 'bold'
   }
-});
+};
 
 export default LandingPage;

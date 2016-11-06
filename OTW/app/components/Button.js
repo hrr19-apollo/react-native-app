@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Text,
   TouchableHighlight,
-  StyleSheet
+  StyleSheet 
 } from 'react-native';
 
 const Button = ({label, onPress, customStyles}) => {
@@ -25,7 +25,7 @@ const Button = ({label, onPress, customStyles}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   buttonText: {
     fontSize: 14,
     color: 'black',
@@ -44,6 +44,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   }
-});
+};
 
 export default Button;

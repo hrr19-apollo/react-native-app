@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+yarn.lock
 
 # Xcode
 #
@@ -41,5 +42,4 @@ android/app/libs
 android/keystores/debug.keystore
 
 firebaseConfig.js
-
 sendBirdConfig.js
