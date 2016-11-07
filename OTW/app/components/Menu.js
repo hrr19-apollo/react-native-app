@@ -17,6 +17,14 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
   //   .done();
   // }
 
+  async getSession() {
+    try {
+      let session = await AsyncStorage.getItem(REMOVE_USER);
+    } catch(error) {
+      console.log("There is an error.");
+    }
+  }
+
   async removeSession() {
     try {
       await AsyncStorage.removeItem(REMOVE_USER);
