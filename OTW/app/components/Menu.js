@@ -38,7 +38,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={logout}
+        onPress={removeSession}
         label="Log Out"
       />
     </View>
