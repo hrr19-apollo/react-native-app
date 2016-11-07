@@ -26,15 +26,15 @@ async getSession() {
     }
   }
 
+  function logout() {
+    GoogleSignin.revokeAccess()
+    .then(() => GoogleSignin.signOut())
+    .then(this.props.removeUser.bind(this))
+    .done();
+  }
+
 
 const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
-
-  // function logout() {
-  //   GoogleSignin.revokeAccess()
-  //   .then(() => GoogleSignin.signOut())
-  //   .then(this.props.removeUser.bind(this))
-  //   .done();
-  // }
 
   return (
     <View style={styles.container}>
