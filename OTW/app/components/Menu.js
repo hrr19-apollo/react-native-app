@@ -5,7 +5,7 @@ import Button from './Button';
 import Badge from './Badge';
 
 
-const Menu = ({_handleForwardAction, closeControlPanel, logout, user}) => {
+const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
 
   function logout() {
     GoogleSignin.revokeAccess()
