@@ -4,20 +4,12 @@ import {Text, View, StyleSheet} from 'react-native';
 import Button from './Button';
 import Badge from './Badge';
 import removeUser from '../actions/userActions';
-import REMOVE_USER from '../actions/actionTypes';
 
 //import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
-const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
+const REMOVE_USER = 'REMOVE_USER';
 
-  // function logout() {
-  //   GoogleSignin.revokeAccess()
-  //   .then(() => GoogleSignin.signOut())
-  //   .then(this.props.removeUser.bind(this))
-  //   .done();
-  // }
-
-  async getSession() {
+async getSession() {
     try {
       let session = await AsyncStorage.getItem(REMOVE_USER);
     } catch(error) {
@@ -33,6 +25,16 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
       console.log('Error');
     }
   }
+
+
+const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
+
+  // function logout() {
+  //   GoogleSignin.revokeAccess()
+  //   .then(() => GoogleSignin.signOut())
+  //   .then(this.props.removeUser.bind(this))
+  //   .done();
+  // }
 
   return (
     <View style={styles.container}>
