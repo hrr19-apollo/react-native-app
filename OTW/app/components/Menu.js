@@ -17,6 +17,15 @@ const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
   //   .done();
   // }
 
+  async removeSession() {
+    try {
+      await AsyncStorage.removeItem(REMOVE_USER);
+      this.getSession();
+    } catch(error) {
+      console.log('Error');
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Button
