@@ -4,6 +4,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import Button from './Button';
 import Badge from './Badge';
 import removeUser from '../actions/userActions';
+import REMOVE_USER from '../actions/actionTypes';
 
 //import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
