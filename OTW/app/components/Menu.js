@@ -4,6 +4,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import Button from './Button';
 import Badge from './Badge';
 
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
 const Menu = ({_handleForwardAction, closeControlPanel, user}) => {
 
