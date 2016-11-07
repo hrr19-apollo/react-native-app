@@ -4,7 +4,16 @@ import {Text, View, StyleSheet} from 'react-native';
 import Button from './Button';
 import Badge from './Badge';
 
+
 const Menu = ({_handleForwardAction, closeControlPanel, logout, user}) => {
+
+  function logout() {
+    GoogleSignin.revokeAccess()
+    .then(() => GoogleSignin.signOut())
+    .then(this.props.removeUser.bind(this))
+    .done();
+  }
+
   return (
     <View style={styles.container}>
       <Button
@@ -17,7 +26,7 @@ const Menu = ({_handleForwardAction, closeControlPanel, logout, user}) => {
         style={{backgroundColor: 'red'}}
       />
       <Button
-        onPress={() => _handleForwardAction('logout')}
+        onPress={logout}
         label="Log Out"
       />
     </View>
